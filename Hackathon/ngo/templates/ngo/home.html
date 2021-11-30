@@ -1,0 +1,212 @@
+{% extends "ngo/base.html" %}
+
+{% block style %}
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,700&display=swap');
+
+.image-height{
+height: 600px;
+}
+
+.caraousel_img{
+height: 300px;
+width: 75%;
+}
+
+.count{
+height: 80vh;
+background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/10/Apple-Earth-Wallpapers-1.jpg");
+background-position: center;
+background-size: cover;
+background-repeat : no-repeat;
+display : flex;
+<!-- flex-direction : column; -->
+<!-- justify-content: center; -->
+align-items : center;
+}
+
+.myframe{
+margin-top: 125px;
+}
+
+.cards{
+width: 100vw;
+margin: 10px auto;
+}
+
+.row_cards{
+margin: 10px auto;
+}
+
+.myrow{
+display: flex !important;
+justify-content: space-around !important;
+}
+
+.mycard{
+translate : .5s ease-in-out !important;
+box-shadow : 3px 3px #888888 !important:
+}
+
+.mycard:hover{
+cursor : pointer;
+transform : scale(1.05);
+}
+
+.myimg{
+  height: 200px;
+}
+
+body{
+  font-family: 'Mulish', sans-serif;
+}
+
+h3{
+  font-family: 'New Tegomin', serif;
+  font-size: 50px;
+}
+.quotes{
+  font-size: 35px;
+  font-family: 'Noto Serif', serif;
+}
+.home_head{
+  font-style: italic;
+  font-weight: 300;
+  border-bottom: 1px solid black;
+}
+{% endblock style %}
+
+{% block body %}
+
+<!--Carousel-->
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="carousel-caption d-none d-md-block">
+        <p class="quotes">“If you want to eliminate hunger, everybody has to be involved.” </p>
+      </div>
+      <img class="d-block w-100 image-height"
+        src="https://images-ext-2.discordapp.net/external/aFKYMUbAmGEw0xf1dXiyTd57HwyJl0rJob0TqTTQxDo/https/res.cloudinary.com/twenty20/private_images/t_standard-fit/photosp/fc4228fc-fa9b-4220-86a6-0135f9093ab5/stock-photo-poor-one-people-beggar-in-city-giving-eat-food-sleep-on-ground-help-home-homeless-in-city-human-hungry-man-needy-money-cloths-fc4228fc-fa9b-4220-86a6-0135f9093ab5.jpg"
+        alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-caption d-none d-md-block">
+        <p class="quotes">“Hunger is a crisis that has almost a billion people in its grip” </p>
+      </div>
+      <img class="d-block w-100 image-height" src="https://images-ext-1.discordapp.net/external/YsdSMT9fG5IjFqITbd1e5fWfrinRz0kYeVe5F3ri6P8/https/i.pinimg.com/736x/75/30/dd/7530dd3e4a5d3d7e7d7585f220847434.jpg"
+        alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-caption d-none d-md-block">
+        <p class="quotes">“If you can’t feed a hundred people, then feed just one.”</p>
+      </div>
+      <img class="d-block w-100 image-height"
+        src="https://t4.ftcdn.net/jpg/02/16/24/93/360_F_216249364_Iatf7l9P8clB4BqyhxFVi2h7a6oG5OhE.jpg"
+        alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="count">
+  <iframe class="myframe" title='People who died from hunger'
+    src='https://www.theworldcounts.com/embed/challenges/2?background_color=black&color=white&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=40'
+    style='border: none' height='300' width='700'></iframe>
+</div>
+
+<div class="container">
+  <h3 class="prob_head m-4 text-center">The Problem</h3>
+  <h6 class="prob_desc text-center mb-3">The challenge is not a lack of food — it is making food consistently available to everyone who needs it.</h6>
+  </div>
+<div class="container-fluid cards">
+  <div class="row mx-auto row_cards">
+    <div class="col-10 mx-auto">
+      <div class="row myrow">
+        <div className="col-md-4 col-sm-6 col-12 d-flex justify-content-center">
+          <div class="card my-2  mycard shadow" style="width: 18rem;">
+            <img src="https://richmondvale.org/images/easyblog_images/115/sb-game-hacker.jpg" class="card-img-top myimg"
+              alt="..." />
+            <div class="card-body">
+              <p class="card-text card_p">Hunger kills more people each year than AIDS, malaria and terrorism combined
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-4 col-sm-6 col-12 d-flex justify-content-center ml-3 mr-3">
+          <div class="card my-2  mycard shadow" style="width: 18rem;">
+            <img src="https://newslanded.com/wp-content/uploads/2020/04/42de7cbe3ff10d84b2a281d4172da65c.png"
+              class="card-img-top myimg" alt="..." />
+            <div class="card-body">
+              <h5></h5>
+              <p class="card-text card_p">Every 10 seconds, a child dies from hunger</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-4 col-sm-6 col-12 d-flex justify-content-center ml-3 mr-3">
+          <div class="card my-2  mycard shadow" style="width: 18rem;">
+            <img
+              src="https://timesofindia.indiatimes.com/thumb/msid-71497463,imgsize-383337,width-400,resizemode-4/71497463.jpg"
+              class="card-img-top myimg" alt="..." />
+            <div class="card-body">
+              <p class="card-text card_p">82% of hungry people live in countries with food surpluses, not food shortages
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mx-auto row_cards">
+    <div class="col-10 mx-auto">
+      <div class="row myrow">
+        <div className="col-md-4 col-sm-6 col-12 d-flex justify-content-center">
+          <div class="card my-2  mycard shadow" style="width: 18rem;">
+            <img
+              src="https://ichef.bbci.co.uk/news/400/cpsprodpb/156EE/production/_113309778_gettyimages-524903696.jpg"
+              class="card-img-top myimg " alt="..." />
+            <div class="card-body">
+              <p class="card-text card_p">One in every eight people sleeps hungry each night</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-4 col-sm-6 col-12 d-flex justify-content-center ml-3 mr-3">
+          <div class="card my-2  mycard shadow" style="width: 18rem;">
+            <img src="https://www.arabnews.com/sites/default/files/styles/n_670_395/public/2017/08/29/980906-178891002.jpg?itok=ev1gSm8g"
+              class="card-img-top myimg" alt="..." />
+            <div class="card-body">
+              <p class="card-text card_p">One-third of the food produced around the world is never consumed</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-4 col-sm-6 col-12 d-flex justify-content-center ml-3 mr-3">
+          <div class="card my-2  mycard shadow" style="width: 18rem;">
+            <img src="https://static.toiimg.com/thumb/msid-72523533,width-1200,height-900,resizemode-4/.jpg"
+              class="card-img-top myimg" alt="..." />
+            <div class="card-body">
+              <p class="card-text card_p">850 million hungry people in the world</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h2 class="home_head text-center">List Of Registered NGO's <i class="fas fa-map-marker" style="color:#2962FF;"></i>  And Event Organizers <i class="fas fa-comment-alt" style="color:#FF0015;"></i></h2>
+<iframe src="https://www.atlistmaps.com/map/2664ab53-3f82-493e-8637-3c1b9cb52d75?share=true" allow="geolocation" width="100%" height="400px" frameborder="0" scrolling="no" allowfullscreen></iframe>
+
+{% endblock body %}

@@ -1,0 +1,81 @@
+{% extends "ngo/base.html" %}
+
+{% block style %}
+
+h4{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.event-header{
+  height: 50px;
+  font-size: 35px;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.align-div{
+  display: flex;
+  justify-content: space-around;
+}
+.address-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-xl {
+    margin-top: 50px;
+    padding: 10px 20px;
+    font-size: 30px;
+    border-radius: 10px;
+}
+#mymap{
+  height: 500px;
+}
+
+.mybtn{
+  margin-bottom: 15px !important;
+}
+{% endblock style %}
+
+{% block body %}
+<h4 class="display-4 mt-2">Event Organizer: {{ event.event_organiser }}</h4>
+<div class="card border-dark mb-3" style="padding: 20px; margin: 50px;">
+  <div class="card-header event-header"><span style="padding-right: 100px;">Event Name: {{ event.event_name }} </span>Event Type: {{ event.event_type }}</div>
+  <div class="card-body text-dark">
+    <div>
+      <h5 class="card-title"><span style="float: left;">Name of Event Handler: {{ event.event_manager }}</span>
+        <span class="align-div">Contact Details: {{ event.event_contact }}</span></h5>
+    </div>
+    <div>
+      <h5 class="card-title">Address: {{ event.event_address }}</h5>
+    <div class="address-div">
+      <h5 class="card-title">
+      <span style="padding-right: 300px;">City: {{ event.event_city }}</span>
+      <span style="padding-right: 300px;">State: {{ event.event_state }}</span>
+      <span >Zipcode: {{ event.event_zipcode }}</span>
+    </h5>
+    </div>
+    <div class="text-center">
+    <button type="button" class="btn btn-outline-secondary btn-xl mybtn">Food Quantity: {{ event.event_foodqty }} Kg</button>
+  </div>
+    
+</div>
+<div id="mymap"></div>
+{% endblock body %}
+
+{% block script %}
+<script>
+var mymap = L.map('mymap').setView([{{event.event_lat}}, {{event.event_lon}}], 13);
+
+ const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright%22%3EOpenStreetMap</a> contributors';
+
+ const layer = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+
+ const tiles = L.tileLayer(layer,{attribution});
+ tiles.addTo(mymap);
+
+ var marker = L.marker([{{event.event_lat}}, {{event.event_lon}}]).addTo(mymap);
+</script>
+{% endblock script %}

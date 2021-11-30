@@ -1,0 +1,167 @@
+{% extends "ngo/base.html" %}
+{% block style %}
+.title{
+font-size: 25px;
+/* text-decoration: underline; */
+border-bottom: 1px solid black;
+
+font-style: italic;
+font-weight: 400;
+}
+
+.card-text span{
+font-weight : bold;
+/* font-style : italic; */
+}
+
+.card-text{
+font-weight: 300;
+}
+
+.mybtn{
+background-color: white;
+padding: 10px;
+width: 95%!important;
+text-decoration: none;
+border-radius: 10px;
+border: 1px solid dodgerblue;
+margin: 1px auto;
+color: dodgerblue;
+outline: none;
+text-align: center;
+}
+
+.mybtn:hover{
+cursor: pointer;
+background-color: dodgerblue;
+color: white;
+text-decoration: none;
+}
+
+.card{
+width: 50rem !important;
+}
+
+.div1{
+width: 50%;
+/* background-color: ghostwhite; */
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.div2{
+width: 50%;
+/* background-color: grey; */
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.row1{
+/* background-color: blue; */
+}
+
+.image_class{
+/* background-color: black; */
+}
+
+.myimg{
+height: 250px;
+width: 250px;
+-webkit-filter: drop-shadow(5px 5px 5px #222);
+filter: drop-shadow(5px 5px 5px #222);
+}
+
+@media(max-width: 1000px) {
+.card{
+width: 40rem !important;
+}
+}
+
+@media(max-width: 770px) {
+.card{
+width: 30rem !important;
+}
+.div1{
+width: 100%;
+}
+
+.div2{
+margin-top: 10px;
+width: 100%;
+}
+}
+
+@media(max-width: 530px) {
+.card{
+width: 25rem !important;
+}
+}
+
+
+
+@media(max-width: 460px) {
+.card{
+width: 20rem !important;
+}
+}
+
+@media(max-width: 350px) {
+.card{
+width: 15rem !important;
+}
+}
+
+{% endblock style %}
+{% block body %}
+<div class="container">
+{% for event in events %}
+  <div class="row mt-3">
+    <div class="col-11 mx-auto">
+      <div class="row mx-auto">
+        <div class="col-8-lg col-10-md col-12-sm mx-auto">
+          <div class="card animate flipInX">
+            <div class="card-body mycard shadow-lg">
+              <h5 class="card-title text-center title">{{ event.event_name }}</h5>
+              <hr>
+              <div class="row row1">
+                <div class="div1">
+                  <p class="card-text">
+                    <span>Event Organizer : </span> {{ event.event_organiser }}
+                  </p>
+                  <p class="card-text">
+                    <span>Contact : <i class="fas fa-phone"></i></span> {{ event.event_contact }}
+                  </p>
+                  <p class="card-text">
+                    <span>Location : <i class="fas fa-map-marker-alt"></i></span> {{ event.event_location }}
+                  </p>
+                  <p class="card-text">
+                    <span>Food Quantity : <i class="fas fa-balance-scale-right"></i></span> {{ event.event_foodqty }} Kg
+                  </p>
+                  <p class="card-text">
+                  {% if  event.event_status  %}
+                      <span>Status : </span> Available
+                  {% else %}
+                      <span>Status : </span> Not Available
+                  {% endif %}
+                    
+                  </p>
+                </div>
+                <div class="div2 image_class">
+                  <img
+                    src="{{ event.event_organiser.organisation_picture.url }}"
+                    class="myimg img-fluid " alt="image">
+                </div>
+              </div>
+              <!-- <a href="#" class="mybtn mt-5 text-center"> Details </a> -->
+              <a href="{% url 'event-detail' event.id %}" class="mybtn mt-3 text-center"> Details </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock body %}

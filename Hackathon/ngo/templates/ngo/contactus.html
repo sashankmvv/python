@@ -1,0 +1,207 @@
+{% extends "ngo/base.html" %}
+
+{% block style %}
+  
+    .fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 40%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+.fa-linkedin {
+    background: #0e76a8 ;
+    color: white;
+}
+.fa-envelope {
+    background: #BB001B ;
+    color: white;
+}
+
+.fa-whatsapp {
+  background: #25D366;
+  color: white;
+}
+
+.padding-c{
+    padding-top: 100px;
+}
+.img-height{
+  height: 250px;
+}
+
+.logo{
+  animation: slide 1s alternate infinite ease-in-out;
+  -webkit-filter: drop-shadow(3px 3px 3px #222);
+  filter: drop-shadow(3px 3px 3px #222);
+}
+
+@keyframes slide{
+  from{
+    transform : translateY(5px);
+  }
+  to{
+    transform : translateY(-5px);
+  }
+}
+
+.bio{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lead{
+  font-style: italic;
+  font-weight: 400;
+}
+
+.lead span{
+  font-size: 30px;
+  margin-right: 7px;
+}
+
+#abc{
+  font-size: 30px;
+  margin-left: 7px;
+}
+.para{
+  font-size: 19.5px;
+}
+
+{% endblock style %}
+
+{% block body %}
+
+          <div class="container padding-c">
+            <div class="jumbotron">
+              <div class="bio">
+                <img src="/media/images/logo.png" class="logo" alt="Logo">
+                <p class="lead"><span><i class="fas fa-quote-left"></i></span>Hunger is something no one should struggle with- or be judged for.<span id="abc"><i class="fas fa-quote-right"></i></span></p>
+                <p class="para">There is a surplus amount of food and every day billions of tonnes of food get wasted but still, there are millions of people across the world who are dying of hunger. We, at DaanData aim to ensure that there should be equal distribution of food among all human beings and that each person is entitled to their fair share of food. We do so by connecting nearby Event Organisers to NGOs so that they can donate the surplus amount of food to the needy people.</p>
+            </div>
+          <hr class="my-4">
+        </div>
+          </div>
+        
+      
+        <div class="album py-5 bg-light">
+          <div class="container">
+      
+            <div class="row">
+              <div class="col-lg-3 d-flex align-items-stretch">
+                <div class="card shadow-sm"> 
+                    <img src="/media/images/sushi.jpg" class="card-img-top img-height" alt="..." style="max-height:300px;">     
+                  <div class="card-body">
+                    <h5 class="card-title">Sashank MVV</h5><hr>
+                    <p class="card-text">Second Year Computer Engineering student from K. J. Somaiya College Of Engineering.</p>
+                    <div class="row">
+                        <div class="col">
+                            <a href="https://wa.me/918169974101?text=Hey!%20I%20would%20like%20to%20connect%20with%20you%20regarding%20your%20website" class="fa fa-whatsapp"></a>
+                        </div>
+                        <div class="col">
+                          <a href="https://www.linkedin.com/in/sashank-m-v-v-39034b192/" class="fa fa-linkedin"></a>
+                        </div>
+                        <div class="col">
+                            <a href="mailto:sashankmvv@gmail.com" class="fa fa-envelope"></a>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 d-flex align-items-stretch">
+                <div class="card shadow-sm">  
+                    <img src="/media/images/harshit.jpg" class="card-img-top img-height" alt="..." style="max-height:300px;">         
+                  <div class="card-body">
+                    <h5 class="card-title">Harshit Jain</h5><hr>
+                    <p class="card-text">Second Year Computer Engineering student from K. J. Somaiya College Of Engineering.</p>
+                      <div class="row">
+                        <div class="col">
+                            <a href="https://wa.me/919730813585?text=Hey!%20I%20would%20like%20to%20connect%20with%20you%20regarding%20your%20website" class="fa fa-whatsapp"></a>
+                        </div>
+                        <div class="col">
+                          <a href="https://www.linkedin.com/in/harshit-n-jain/" class="fa fa-linkedin"></a>
+                        </div>
+                        <div class="col">
+                            <a href="mailto:flyasharshit24.hj@gmail.com" class="fa fa-envelope"></a>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 d-flex align-items-stretch">
+                <div class="card shadow-sm">    
+                    <img src="/media/images/priyal.jpg" class="card-img-top img-height" alt="..." style="max-height:300px;">       
+                  <div class="card-body">
+                    <h5 class="card-title">Priyal Babel</h5><hr>
+                    <p class="card-text">Second Year Computer Engineering student from K. J. Somaiya College Of Engineering.</p>
+                    <div class="row">
+                        <div class="col">
+                            <a href="https://wa.me/918976514635?text=Hey!%20I%20would%20like%20to%20connect%20with%20you%20regarding%20your%20website" class="fa fa-whatsapp"></a>
+                        </div>
+                        <div class="col">
+                          <a href="https://www.linkedin.com/in/priyal-babel/" class="fa fa-linkedin"></a>
+                        </div>
+                        <div class="col">
+                            <a href="mailto:priyalbabel@gmail.com" class="fa fa-envelope"></a>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 d-flex align-items-stretch">
+                <div class="card shadow-sm">
+                    <img src="/media/images/devansh.jpeg" class="card-img-top img-height" alt="..." style="max-height:300px;">     
+                  <div class="card-body">
+                    <h5 class="card-title">Devansh Shah</h5><hr>
+                    <p class="card-text">Second Year Computer Engineering student from K. J. Somaiya College Of Engineering.</p>
+                    <div class="row">
+                        <div class="col">
+                            <a href="https://wa.me/918767036024?text=Hey!%20I%20would%20like%20to%20connect%20with%20you%20regarding%20your%20website" class="fa fa-whatsapp"></a>
+                        </div>
+                        <div class="col">
+                          <a href="https://www.linkedin.com/in/devansh-shah-6162841a4/" class="fa fa-linkedin"></a>
+                        </div>
+                        <div class="col">
+                          <a href="mailto:devanshshah649@gmail.com" class="fa fa-envelope"></a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            
+      
+      <footer class="text-muted py-5">
+        <div class="container">
+          <p class="float-end mb-1">
+            <a href="#">Back to top</a>
+          </p>
+        </div>
+      </footer>
+
+  
+    <!-- Optional JavaScript; choose one of the two! -->
+
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js'></script>   
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+
+
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  
+{% endblock body %}
